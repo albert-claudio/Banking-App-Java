@@ -41,8 +41,8 @@ public class BankingAppGui extends BaseFrame{
         currentBalanceField.setEditable(false);
         add(currentBalanceField);
 
-        Color green = new Color(34, 139, 34);
-        Color ligthGreen = new Color(144, 238, 144);
+        Color ligthGreen = new Color(8, 141, 86);
+        Color  green = new Color(5, 82, 50);
 
         //BOTÃO DE DEPOSITO
         JButton depositButton = new JButton("Deposito");
@@ -50,6 +50,9 @@ public class BankingAppGui extends BaseFrame{
         depositButton.setFont( new Font("Dialog", Font.BOLD, 22));
         depositButton.setBackground(green);
         depositButton.setForeground(Color.WHITE);
+
+        depositButton.setBorderPainted(false);
+        depositButton.setFocusPainted(false);
 
         depositButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -64,8 +67,8 @@ public class BankingAppGui extends BaseFrame{
         });
         add(depositButton);
 
-        Color orange = new Color(255, 165, 0);
-        Color ligthOrange = new Color(255, 183,77);
+        Color orange = new Color(147, 91, 18);
+        Color ligthOrange = new Color(206, 128,25);
 
         //BOTÃO DE RETIRADA
         JButton withdrawButton = new JButton("Retirar");
@@ -73,6 +76,9 @@ public class BankingAppGui extends BaseFrame{
         withdrawButton.setFont( new Font("Dialog", Font.BOLD, 22));
         withdrawButton.setBackground(orange);
         withdrawButton.setForeground(Color.WHITE);
+
+        withdrawButton.setBorderPainted(false);
+        withdrawButton.setFocusPainted(false);
 
         withdrawButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -87,27 +93,85 @@ public class BankingAppGui extends BaseFrame{
         });
         add(withdrawButton);
 
-        Color Blue = new Color(37,151,151);
+        Color Blue = new Color(7,130,224);
+        Color ligthBlue = new Color( 4, 79, 137);
 
 
         //BOTÃO DE TRANSAÇÕES ANTERIORES
         JButton pastTransaction = new JButton("Transações Anteriores");
-        pastTransaction.setBounds(15, 250, getWidth() - 50, 50);
+        pastTransaction.setBounds(15, 320, getWidth() - 50, 50);
         pastTransaction.setFont( new Font("Dialog", Font.BOLD, 22));
-        pastTransaction.setBackground(orange);
+        pastTransaction.setBackground(Blue);
         pastTransaction.setForeground(Color.WHITE);
+
+        pastTransaction.setBorderPainted(false);
+        pastTransaction.setFocusPainted(false);
 
         pastTransaction.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                pastTransaction.setBackground(ligthOrange);
+                pastTransaction.setBackground(Blue);
             }
 
             @Override
             public void mouseExited(MouseEvent e){
-                pastTransaction.setBackground(orange);
+                pastTransaction.setBackground(ligthBlue);
             }
         });
         add(pastTransaction);
+
+        Color White = new Color(255, 255, 255);
+        Color Grey = new Color(168, 168, 168);
+
+        //BOTÃO DE TRANFERENCIA
+        JButton transferButton = new JButton("Transferencia");
+        transferButton.setBounds(15, 390, getWidth() - 50, 50);
+        transferButton.setFont( new Font("Dialog", Font.BOLD, 22));
+        transferButton.setBackground(White);
+        transferButton.setForeground(Color.BLACK);
+
+        transferButton.setBorderPainted(false);
+        transferButton.setFocusPainted(false);
+
+        transferButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                transferButton.setBackground(Grey);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e){
+                transferButton.setBackground(White);
+            }
+        });
+        add(transferButton);
+
+        Color  red = new Color(167, 23,15);
+        Color ligthRed = new Color(195,  26, 18);
+
+        //BOTÃO DE SAIR
+        JButton logoutButton = new JButton("Sair");
+        logoutButton.setBounds(15, 500, getWidth() - 50, 50);
+        logoutButton.setFont( new Font("Dialog", Font.BOLD, 22));
+        logoutButton.setBackground(red);
+        logoutButton.setForeground(Color.WHITE);
+
+        logoutButton.setBorderPainted(false);
+        logoutButton.setFocusPainted(false);
+
+        logoutButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                logoutButton.setBackground(ligthRed);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e){
+                logoutButton.setBackground(red);
+            }
+        });
+        add(logoutButton);
+
+
     }
 }

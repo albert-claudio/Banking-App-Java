@@ -65,7 +65,8 @@ public class RegisterGUI extends BaseFrame{
         Color normalColor = new Color(3, 133, 84); // Cor normal (#038554)
         Color hoverColor = new Color(0, 102, 64); // Cor de hover (um tom mais escuro ou diferente)
 
-        //CRIAÇÃO DO BOTÃO DE LOGIN
+        //CR
+        // IAÇÃO DO BOTÃO DE LOGIN
         JButton registerButton = new JButton("Registra-se");
         registerButton.setBounds(20, 460, getWidth() - 50, 40);
         registerButton.setFont(new Font("Dialog", Font.BOLD, 20));

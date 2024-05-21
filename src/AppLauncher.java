@@ -13,9 +13,9 @@ public class AppLauncher {
             public void run(){
                 //new LoginGui().setVisible(true);
                 //new RegisterGUI().setVisible(true);
-                new BankingAppGui(
-                        new User(1, "username", "password", new BigDecimal("20.00"))
-                ).setVisible(true);
+                //new BankingAppGui(
+                        /*new User(1, "username", "password", new BigDecimal("20.00"))
+                ).setVisible(true);*/
             }
         });
     }
